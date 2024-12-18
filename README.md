@@ -102,7 +102,17 @@ https://mermaid.js.org/intro/ (https://mermaid.js.org/intro/), https://excalidra
 
 * The provided tools also allow you to store your diagrams in “text”, so, commit your diagram in a new Git branch and squash merge to main branch.
 
-## How to run the app
+## Dockerización
 
-* Clone the repository
-* Run `mvn spring-boot:run` from root folder on the 
+### Requisitos Previos
+
+- [Docker](https://www.docker.com/get-started) instalado en tu máquina.
+- [Docker Compose](https://docs.docker.com/compose/install/) instalado.
+
+### Configuración de Variables de Entorno
+
+Crea un archivo `.env` en la raíz del proyecto con las siguientes variables:
+
+```env
+POSTGRES_PASSWORD=123qwe123
+SPRING_DATASOURCE_PASSWORD=123qwe123
