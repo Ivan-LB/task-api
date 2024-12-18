@@ -1,20 +1,19 @@
 # “Taskify” – Task Management System project, with milestones scoped to be achievable over individual weekends:
 
-## Instructions
+## Overview
+This is a basic Spring Boot project set up with Maven. Currently, the project includes:
 
-1. Please review the entire project breakdown to get a clear understanding of what needs to be done.
+- A `/health` endpoint to verify the application is running.
+- A simple unit test (`HealthControllerTest`) to validate the `/health` endpoint.
 
-2. While it’s optional, we recommend working with separate branches and using squash merges to integrate them back into the main branch. Feel free to commit directly to the main branch if that’s easier for you.
+## How to Run
+1. Clone the repository.
+2. Run `mvn spring-boot:run` in the project’s root directory.
+3. Go to `http://localhost:8080/health` to confirm the application is up.
 
-3. We suggest keeping a record of your observations, learnings, and the time spent on each milestone.
-
-4. Once completed, kindly share your GitHub repository by sending the link to mailto:arturo.solano@itj.com.
-
-5. Don’t worry if you can’t finish the entire project! It’s more important to focus on understanding the concepts in each milestone.
-
-6. You’ll have until Monday afternoon to work on this project.
-
-7. We invite you to a live Presentation and Q&A session on Tuesday, December 17, 2024, from 9:30 AM to 12:00 PM (PST).
+## How to Run Tests
+- From IntelliJ: Right-click on `HealthControllerTest` and select `Run`.
+- From the terminal: `mvn test`
 
 ## Weekend Milestone Breakdown
 
@@ -102,3 +101,8 @@ Code committed in a new Git branch and squash merged to main branch
 https://mermaid.js.org/intro/ (https://mermaid.js.org/intro/), https://excalidraw.com/ (https://excalidraw.com/), https://www.websequencediagrams.com/ (https://www.websequencediagrams.com/))
 
 * The provided tools also allow you to store your diagrams in “text”, so, commit your diagram in a new Git branch and squash merge to main branch.
+
+## How to run the app
+
+* Clone the repository
+* Run `mvn spring-boot:run` from root folder on the 
