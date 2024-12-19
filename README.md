@@ -72,23 +72,15 @@ Taskify is a robust task management application built with Spring Boot, JPA/Hibe
 
 **Scope:**
 
-Set up a PostgreSQL database or an in-memory H2 database.
+* Set up a PostgreSQL database or an in-memory H2 database.
+* Implement persistence using JPA and Hibernate.
+* Create schema for Task table and use it for CRUD operations.
 
-Implement persistence using JPA and Hibernate.
+**Output:**
 
-Create schema for
-Task
- table and use it for CRUD operations.
-
-Output:
-
-Tasks are saved in the database.
-
-SQL script or
-schema.sql
- added to the project.
-
-Code committed in a new Git branch and squash merged to main branch
+* Tasks are saved in the database.
+* SQL script or schema.sql added to the project.
+* Code committed in a new Git branch and squash merged to main branch
 
 ### Milestone 5: Clean Code Practices
 
