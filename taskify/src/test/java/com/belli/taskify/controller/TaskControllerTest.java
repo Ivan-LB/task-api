@@ -3,7 +3,6 @@ package com.belli.taskify.controller;
 import com.belli.taskify.model.Task;
 import com.belli.taskify.service.TaskService;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -18,7 +17,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(TaskController.class)
-public class TaskControllerTest {
+class TaskControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
