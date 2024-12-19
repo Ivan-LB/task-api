@@ -1,0 +1,10 @@
+sequenceDiagram
+    actor User
+    User ->> TaskController: POST /tasks (Task data)
+    TaskController ->> TaskService: createTask(Task data)
+    TaskService ->> TaskRepository: save(Task entity)
+    TaskRepository ->> Database: INSERT INTO tasks (id, title, description, status)
+    Database -->> TaskRepository: Task saved confirmation
+    TaskRepository -->> TaskService: Task entity
+    TaskService -->> TaskController: Task entity
+    TaskController -->> User: HTTP 201 Created (Task entity)
