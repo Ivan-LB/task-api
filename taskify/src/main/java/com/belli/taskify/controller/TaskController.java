@@ -6,6 +6,7 @@ import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -20,7 +21,9 @@ public class TaskController {
     @PostMapping
     public ResponseEntity<Task> createTask(@Valid @RequestBody Task task) {
         Task created = taskService.createTask(task);
-        return ResponseEntity.ok(created);
+        return ResponseEntity
+                .created(URI.create("/tasks/" + created.getId()))
+                .body(created);
     }
 
     @GetMapping

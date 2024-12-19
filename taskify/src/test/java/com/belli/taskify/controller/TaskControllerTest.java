@@ -33,9 +33,12 @@ class TaskControllerTest {
         mockMvc.perform(post("/tasks")
             .contentType(MediaType.APPLICATION_JSON)
             .content("{\"title\":\"New Task\",\"description\":\"Description\",\"status\":\"Pending\"}"))
-            .andExpect(status().isOk())
+            .andExpect(status().isCreated())
+            .andExpect(header().string("Location", "/tasks/1")) // Verify Location header
             .andExpect(jsonPath("$.id").value(1))
-            .andExpect(jsonPath("$.title").value("New Task"));
+            .andExpect(jsonPath("$.title").value("New Task"))
+            .andExpect(jsonPath("$.description").value("Description"))
+            .andExpect(jsonPath("$.status").value("Pending"));
 
         // Verify that taskService.createTask was called once with a Task object having "New Task" title
         Mockito.verify(taskService, Mockito.times(1))

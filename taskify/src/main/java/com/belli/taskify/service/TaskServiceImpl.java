@@ -12,6 +12,10 @@ public class TaskServiceImpl implements TaskService {
 
     private TaskRepository taskRepository;
 
+    public TaskServiceImpl(TaskRepository taskRepository) {
+        this.taskRepository = taskRepository;
+    }
+
     @Override
     public Task createTask(Task task) {
         return taskRepository.save(task);
